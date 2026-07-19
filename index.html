@@ -114,6 +114,19 @@
   .phone img{ display:block; width:100%; border-radius:36px; }
   @media (prefers-color-scheme: dark){ .phone{ background:#000; border:1px solid #2a2a2e; } }
 
+  /* Premium illustration */
+  .prem-ill{ width:100%; max-width:390px; margin:0 auto; }
+  .prem-ill svg{ width:100%; height:auto; display:block; overflow:visible; }
+  .pi-ring{ fill:none; stroke:var(--border2); stroke-width:1.5; }
+  .pi-dot{ fill:var(--border2); }
+  .pi-dot-gold{ fill:var(--gold); }
+  .pi-chipbg{ fill:var(--card); stroke:var(--border); stroke-width:1.5; }
+  .pi-line{ fill:var(--border2); }
+  .pi-chip{ filter:drop-shadow(0 10px 22px rgba(30,25,15,.12)); }
+  .pi-star{ filter:drop-shadow(0 16px 36px rgba(184,145,47,.4)); }
+  .pi-spark{ fill:var(--gold); }
+  @media (prefers-color-scheme: dark){ .pi-chip{ filter:drop-shadow(0 10px 22px rgba(0,0,0,.4)); } }
+
   .hero-stage{ margin:52px auto 0; max-width:960px; position:relative; display:flex; justify-content:center; align-items:flex-end; gap:0; }
   .hero-stage .phone{ width:250px; }
   .hero-stage .p-main{ width:290px; z-index:2; }
@@ -123,6 +136,7 @@
 
   /* ---------- Section shell ---------- */
   section{ padding:88px 0; }
+  section[id]{ scroll-margin-top:82px; }   /* land below the sticky navbar on anchor jumps */
   .sec-head{ text-align:center; max-width:640px; margin:0 auto 8px; }
   .kicker{ font-size:14px; font-weight:800; letter-spacing:.06em; text-transform:uppercase; color:var(--gold); margin:0 0 12px; }
   h2{ font-size:clamp(28px, 4vw, 42px); font-weight:800; letter-spacing:-.03em; line-height:1.1; margin:0 0 14px; }
@@ -293,7 +307,52 @@
   <!-- PREMIUM -->
   <section id="premium" class="premium">
     <div class="container prem-grid">
-      <div class="prem-media f-media"><div class="phone"><img src="assets/raw/premium.png" alt="Atlas Premium" loading="lazy"></div></div>
+      <div class="prem-media f-media">
+        <div class="prem-ill" aria-hidden="true">
+          <svg viewBox="0 0 400 460" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <radialGradient id="pGlow" cx="50%" cy="46%" r="52%">
+                <stop offset="0%" stop-color="#D9B45B" stop-opacity="0.34"/>
+                <stop offset="55%" stop-color="#C89A3A" stop-opacity="0.08"/>
+                <stop offset="100%" stop-color="#B8912F" stop-opacity="0"/>
+              </radialGradient>
+              <linearGradient id="pStar" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0%" stop-color="#EBCE82"/>
+                <stop offset="55%" stop-color="#C99B33"/>
+                <stop offset="100%" stop-color="#A97F22"/>
+              </linearGradient>
+            </defs>
+            <rect width="400" height="460" fill="url(#pGlow)"/>
+            <circle cx="200" cy="210" r="150" class="pi-ring"/>
+            <circle cx="200" cy="210" r="102" class="pi-ring"/>
+            <circle cx="200" cy="60"  r="6" class="pi-dot-gold"/>
+            <circle cx="350" cy="210" r="5" class="pi-dot"/>
+            <circle cx="50"  cy="210" r="5" class="pi-dot"/>
+            <circle cx="200" cy="360" r="6" class="pi-dot-gold"/>
+            <g class="pi-chip" transform="translate(28,124)">
+              <rect class="pi-chipbg" width="98" height="34" rx="11"/>
+              <circle cx="19" cy="17" r="5" class="pi-dot-gold"/>
+              <rect class="pi-line" x="33" y="13.5" width="48" height="7" rx="3.5"/>
+            </g>
+            <g class="pi-chip" transform="translate(248,68)">
+              <rect class="pi-chipbg" width="88" height="34" rx="11"/>
+              <circle cx="19" cy="17" r="5" class="pi-dot-gold"/>
+              <rect class="pi-line" x="33" y="13.5" width="38" height="7" rx="3.5"/>
+            </g>
+            <g class="pi-chip" transform="translate(250,300)">
+              <rect class="pi-chipbg" width="98" height="34" rx="11"/>
+              <circle cx="19" cy="17" r="5" class="pi-dot-gold"/>
+              <rect class="pi-line" x="33" y="13.5" width="48" height="7" rx="3.5"/>
+            </g>
+            <path class="pi-star" fill="url(#pStar)" transform="translate(200,210)"
+                  d="M0,-66 C7,-24 24,-7 66,0 C24,7 7,24 0,66 C-7,24 -24,7 -66,0 C-24,-7 -7,-24 0,-66 Z"/>
+            <path class="pi-spark" transform="translate(98,316) scale(0.26)"
+                  d="M0,-66 C7,-24 24,-7 66,0 C24,7 7,24 0,66 C-7,24 -24,7 -66,0 C-24,-7 -7,-24 0,-66 Z"/>
+            <path class="pi-spark" transform="translate(318,158) scale(0.2)"
+                  d="M0,-66 C7,-24 24,-7 66,0 C24,7 7,24 0,66 C-7,24 -24,7 -66,0 C-24,-7 -7,-24 0,-66 Z"/>
+          </svg>
+        </div>
+      </div>
       <div class="prem-text">
         <span class="prem-badge">✦ Atlas Premium</span>
         <h2>Go a little deeper.</h2>
