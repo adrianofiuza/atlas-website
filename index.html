@@ -92,6 +92,10 @@
   .appstore svg{ width:26px; height:26px; flex:none; }
   .appstore .l1{ font-size:11px; font-weight:600; letter-spacing:.02em; opacity:.85; line-height:1.1; }
   .appstore .l2{ font-size:19px; font-weight:800; letter-spacing:-.01em; line-height:1.15; }
+  .appstore-badge{ display:inline-block; line-height:0; transition:transform .12s ease, opacity .15s; }
+  .appstore-badge:active{ transform:scale(.97); }
+  .appstore-badge:hover{ opacity:.85; }
+  .appstore-badge img{ height:54px; width:auto; display:block; }
 
   /* ---------- Hero ---------- */
   .hero{ position:relative; text-align:center; padding:78px 0 40px; }
@@ -214,9 +218,11 @@
       <h1>Everything in one calm place.</h1>
       <p class="lead">Tasks, notes, a daily journal, and focus sessions. One quietly beautiful app that syncs across your devices, with nothing in the way.</p>
       <div class="cta-row">
-        <a class="appstore" href="https://apps.apple.com/app/id6783143182">
-          <svg viewBox="0 0 384 512" fill="currentColor" aria-hidden="true"><path d="M318.7 268.7c-.2-36.7 16.4-64.4 50-84.8-18.8-26.9-47.2-41.7-84.7-44.6-35.5-2.8-74.3 20.7-88.5 20.7-15 0-49.4-19.7-76.4-19.7C63.3 141.2 4 184.8 4 273.5q0 39.3 14.4 81.2c12.8 36.7 59 126.7 107.2 125.2 25.2-.6 43-17.9 75.8-17.9 31.8 0 48.3 17.9 76.4 17.9 48.6-.7 90.4-82.5 102.6-119.3-65.2-30.7-61.7-90-61.7-91.9zm-56.6-164.2c27.3-32.4 24.8-61.9 24-72.5-24.1 1.4-52 16.4-67.9 34.9-17.5 19.8-27.8 44.3-25.6 71.9 26.1 2 49.9-11.4 69.5-34.3z"/></svg>
-          <span><span class="l1">Download on the</span><br><span class="l2">App Store</span></span>
+        <a class="appstore-badge" href="https://apps.apple.com/app/id6783143182" aria-label="Download Atlas on the App Store">
+          <picture>
+            <source srcset="assets/appstore-white.svg" media="(prefers-color-scheme: dark)">
+            <img src="assets/appstore-black.svg" alt="Download on the App Store" height="54" width="162">
+          </picture>
         </a>
         <a class="btn" style="border:1px solid var(--border); color:var(--text); background:var(--card);" href="#features">See what's inside</a>
       </div>
@@ -297,9 +303,11 @@
         </ul>
         <div class="price"><span class="big">Free for 7 days</span></div>
         <p class="price-note">then $4.99/month or $39.99/year. Cancel anytime. Prices may vary by region.</p>
-        <a class="appstore" href="https://apps.apple.com/app/id6783143182">
-          <svg viewBox="0 0 384 512" fill="currentColor" aria-hidden="true"><path d="M318.7 268.7c-.2-36.7 16.4-64.4 50-84.8-18.8-26.9-47.2-41.7-84.7-44.6-35.5-2.8-74.3 20.7-88.5 20.7-15 0-49.4-19.7-76.4-19.7C63.3 141.2 4 184.8 4 273.5q0 39.3 14.4 81.2c12.8 36.7 59 126.7 107.2 125.2 25.2-.6 43-17.9 75.8-17.9 31.8 0 48.3 17.9 76.4 17.9 48.6-.7 90.4-82.5 102.6-119.3-65.2-30.7-61.7-90-61.7-91.9zm-56.6-164.2c27.3-32.4 24.8-61.9 24-72.5-24.1 1.4-52 16.4-67.9 34.9-17.5 19.8-27.8 44.3-25.6 71.9 26.1 2 49.9-11.4 69.5-34.3z"/></svg>
-          <span><span class="l1">Download on the</span><br><span class="l2">App Store</span></span>
+        <a class="appstore-badge" href="https://apps.apple.com/app/id6783143182" aria-label="Download Atlas on the App Store">
+          <picture>
+            <source srcset="assets/appstore-white.svg" media="(prefers-color-scheme: dark)">
+            <img src="assets/appstore-black.svg" alt="Download on the App Store" height="54" width="162">
+          </picture>
         </a>
       </div>
     </div>
@@ -326,9 +334,11 @@
       <h2>Find your calm.</h2>
       <p>Start today, free, and make Atlas the quiet home for your whole day.</p>
       <div class="cta-row">
-        <a class="appstore" href="https://apps.apple.com/app/id6783143182">
-          <svg viewBox="0 0 384 512" fill="currentColor" aria-hidden="true"><path d="M318.7 268.7c-.2-36.7 16.4-64.4 50-84.8-18.8-26.9-47.2-41.7-84.7-44.6-35.5-2.8-74.3 20.7-88.5 20.7-15 0-49.4-19.7-76.4-19.7C63.3 141.2 4 184.8 4 273.5q0 39.3 14.4 81.2c12.8 36.7 59 126.7 107.2 125.2 25.2-.6 43-17.9 75.8-17.9 31.8 0 48.3 17.9 76.4 17.9 48.6-.7 90.4-82.5 102.6-119.3-65.2-30.7-61.7-90-61.7-91.9zm-56.6-164.2c27.3-32.4 24.8-61.9 24-72.5-24.1 1.4-52 16.4-67.9 34.9-17.5 19.8-27.8 44.3-25.6 71.9 26.1 2 49.9-11.4 69.5-34.3z"/></svg>
-          <span><span class="l1">Download on the</span><br><span class="l2">App Store</span></span>
+        <a class="appstore-badge" href="https://apps.apple.com/app/id6783143182" aria-label="Download Atlas on the App Store">
+          <picture>
+            <source srcset="assets/appstore-white.svg" media="(prefers-color-scheme: dark)">
+            <img src="assets/appstore-black.svg" alt="Download on the App Store" height="54" width="162">
+          </picture>
         </a>
       </div>
     </div>
