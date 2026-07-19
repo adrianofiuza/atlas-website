@@ -1,0 +1,22 @@
+{
+  "appId": "6783143182",
+  "appName": "Atlas",
+  "appStoreUrl": "https://apps.apple.com/app/id6783143182",
+  "entries": [
+    {
+      "version": "1.3",
+      "date": "2026-07-14",
+      "notes": "Atlas 1.3 makes your day flow better:\n\n• Focus, simplified: pick 15, 30, 45 or 60 minutes, or tap ∞ for an open-ended flow session. All on one screen.\n• Completed tasks now appear on the day you completed them, so your history reflects what actually happened.\n• Overdue tasks are clearly flagged everywhere, including on their original day.\n• A beautiful new welcome tour greets new members.\n• Cleaner tags in Browse, our updated logo on every screen, and polish throughout.\n\nQuestions or ideas? Reach out from Settings. Happy focusing!"
+    },
+    {
+      "version": "1.2",
+      "date": "2026-07-10",
+      "notes": "• A guided welcome tour to get you started.\n• A completely rebuilt Settings, cleaner and easier to navigate.\n• Calming soundscapes for your focus sessions.\n• Home Screen widgets that jump straight into Atlas.\n• A new in-app Help and FAQ.\n• Atlas Premium is here for the deeper features."
+    },
+    {
+      "version": "1.0",
+      "date": "2026-07-01",
+      "notes": "Atlas launches on the App Store: tasks, notes, a daily journal, and focus sessions, together in one calm app that syncs across your devices."
+    }
+  ]
+}

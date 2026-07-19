@@ -1,0 +1,37 @@
+name: Sync changelog from App Store
+
+# Polls the App Store daily; whenever a new Atlas build goes live, its release
+# notes are appended to changelog.json and committed, which redeploys the site.
+on:
+  schedule:
+    - cron: '17 13 * * *'   # every day at 13:17 UTC
+  workflow_dispatch:          # allow a manual run from the Actions tab
+
+permissions:
+  contents: write
+
+concurrency:
+  group: changelog-sync
+  cancel-in-progress: false
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Fetch current App Store version
+        run: python3 scripts/update-changelog.py
+
+      - name: Commit and push if changed
+        run: |
+          if git diff --quiet -- changelog.json; then
+            echo "changelog.json unchanged; nothing to publish."
+          else
+            git config user.name "atlas-changelog-bot"
+            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+            git add changelog.json
+            git commit -m "changelog: sync new App Store release [skip ci]"
+            git push
+            echo "Published a new release entry."
+          fi
