@@ -45,6 +45,9 @@ footer{ background:var(--bg2); border-top:1px solid var(--border); padding:56px 
 .foot-grid{ display:grid; grid-template-columns:1.4fr 1fr 1fr; gap:40px; margin-bottom:40px; }
 .foot-brand .brand{ margin-bottom:12px; }
 .foot-brand p{ color:var(--muted); font-size:15px; margin:0; max-width:32ch; }
+.foot-brand .social{ display:inline-flex; align-items:center; gap:8px; margin-top:16px; color:var(--muted); text-decoration:none; font-weight:700; font-size:14px; transition:color .16s ease; }
+.foot-brand .social:hover{ color:var(--text); }
+.foot-brand .social svg{ width:18px; height:18px; }
 .foot-col h5{ font-size:13px; font-weight:800; letter-spacing:.04em; text-transform:uppercase; color:var(--muted); margin:0 0 14px; }
 .foot-col a{ display:block; width:fit-content; text-decoration:none; color:var(--muted); font-weight:600; font-size:15px; margin-bottom:10px; transition:color .16s ease, transform .16s ease; }
 .foot-col a:hover{ color:var(--text); transform:translateX(4px); }

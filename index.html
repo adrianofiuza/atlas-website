@@ -174,6 +174,9 @@
   .foot-grid{ display:grid; grid-template-columns:1.4fr 1fr 1fr; gap:40px; margin-bottom:40px; }
   .foot-brand .brand{ margin-bottom:12px; }
   .foot-brand p{ color:var(--muted); font-size:15px; margin:0; max-width:32ch; }
+  .foot-brand .social{ display:inline-flex; align-items:center; gap:8px; margin-top:16px; color:var(--muted); text-decoration:none; font-weight:700; font-size:14px; transition:color .16s ease; }
+  .foot-brand .social:hover{ color:var(--text); }
+  .foot-brand .social svg{ width:18px; height:18px; }
   .foot-col h5{ font-size:13px; font-weight:800; letter-spacing:.04em; text-transform:uppercase; color:var(--muted); margin:0 0 14px; }
   .foot-col a{ display:block; width:fit-content; text-decoration:none; color:var(--muted); font-weight:600; font-size:15px; margin-bottom:10px; transition:color .16s ease, transform .16s ease; }
   .foot-col a:hover{ color:var(--text); transform:translateX(4px); }
@@ -402,6 +405,10 @@
       <div class="foot-brand">
         <a class="brand" href="/"><img class="mark mark-dark" src="assets/atlas-logo.svg" alt="Atlas logo">Atlas</a>
         <p>A calm, all-in-one home for tasks, notes, journaling, and focus.</p>
+        <a class="social" href="https://instagram.com/shareatlas" target="_blank" rel="noopener" aria-label="Atlas on Instagram">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5.5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1.2" fill="currentColor" stroke="none"/></svg>
+          <span>@shareatlas</span>
+        </a>
       </div>
       <div class="foot-col">
         <h5>Product</h5>
